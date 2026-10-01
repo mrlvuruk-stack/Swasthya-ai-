@@ -1,248 +1,345 @@
-# 🏥 SwasthyaAI
+# 🩺 SwasthyaAI
 
-## AI-Powered Citizen-Centric Healthcare Intelligence & Medical Assistance Platform
+### AI-Powered Citizen-Centric Healthcare Intelligence & Assistance Platform
 
-> **SwasthyaAI** is a modular healthcare AI platform designed to help citizens understand medical information, analyze medical images, securely access medical identity records, and receive explainable AI-assisted healthcare insights.
+> **Understand your health. Verify the information. Access the right assistance.**
+
+SwasthyaAI is a modular healthcare AI platform designed to make medical information more **understandable, accessible, explainable, and safety-aware** for citizens.
+
+The platform combines:
+
+- 🧾 **Medical Report Understanding**
+- 🩻 **AI-Powered Medical Imaging**
+- 🧠 **Brain MRI Analysis**
+- 🪪 **Digital Medical Identity**
+- 🚨 **Emergency Medical Access**
+- 👨‍⚕️ **Doctor & Patient Workflows**
+- 🌐 **Regional-Language Accessibility**
+- 🔊 **Voice-Based Health Explanation**
+- 🛡️ **AI Safety & Validation**
+- 🔍 **Explainable AI**
 
 ---
 
-## 🚀 Project Overview
+## 🏆 Why SwasthyaAI?
 
-Healthcare information is often fragmented across:
+Healthcare information is increasingly digital, but **having medical data does not mean understanding it**.
 
-- Laboratory reports
-- Medical images
-- MRI/X-ray scans
-- Patient identity records
-- Emergency information
-- Doctor records
-- Digital medical documents
+Laboratory reports contain complex terminology, numerical biomarkers, reference ranges and clinical measurements.
 
-SwasthyaAI brings these capabilities together into a unified healthcare intelligence platform.
+Medical images require specialized interpretation.
 
-The prototype combines:
+Patients may also struggle to provide their medical history during emergencies.
 
-1. **Medical Report Understanding**
-2. **Chest X-Ray AI**
-3. **Brain MRI AI**
-4. **Medical Imaging Intelligence using MONAI**
-5. **Digital Medical ID**
-6. **Patient & Doctor Portals**
-7. **Emergency Medical Access**
-8. **AI Explainability**
-9. **Medical Data Validation**
-10. **Privacy & Consent-Oriented Architecture**
+This creates a broader problem:
+
+> **The healthcare information gap is not only about access to data — it is about understanding, verification, context and timely access.**
+
+SwasthyaAI addresses this problem through a unified citizen-centric architecture.
+
+Instead of treating every healthcare problem as a separate application, SwasthyaAI creates a modular platform where:
+
+```text
+Medical Data
+     ↓
+AI Processing
+     ↓
+Structured Information
+     ↓
+Validation & Safety
+     ↓
+Explainable Output
+     ↓
+Citizen / Doctor / Emergency Workflow
+```
 
 ---
 
 # 🎯 Core Objective
 
-The objective of SwasthyaAI is not to replace doctors.
+SwasthyaAI aims to transform complex healthcare information into a form that citizens can understand and safely interact with.
 
-Instead, the platform acts as a **citizen-centric healthcare intelligence layer** between raw medical information and the people who need to understand or use it.
+### Primary objectives
 
-### Core Pipeline
+- Simplify complex medical information.
+- Support elderly and low-literacy users.
+- Reduce dependence on technical medical terminology.
+- Provide explainable AI outputs.
+- Validate extracted medical information before presenting it.
+- Provide AI-assisted medical image analysis.
+- Enable structured digital medical identity.
+- Support emergency access to essential medical information.
+- Preserve provenance and traceability of AI-generated information.
+- Create a modular architecture that can evolve into a larger healthcare platform.
+
+---
+
+# 🧩 Platform Architecture
 
 ```text
-                ┌──────────────────────┐
-                │    Citizen / Patient │
-                └───────────┬──────────┘
-                            │
-                            ▼
-                ┌──────────────────────┐
-                │   SwasthyaAI Portal  │
-                └───────────┬──────────┘
-                            │
-          ┌─────────────────┼─────────────────┐
-          │                 │                 │
-          ▼                 ▼                 ▼
-    Medical Reports      Medical Images    Medical ID
-          │                 │                 │
-          ▼                 ▼                 ▼
-      OCR + NLP        Imaging AI Layer   Secure Records
-          │                 │                 │
-          │        ┌────────┼────────┐        │
-          │        │        │        │        │
-          │       X-Ray    MRI    Ultrasound  │
-          │        │        │        │        │
-          │        └────────┼────────┘        │
-          │                 │                 │
-          └─────────────────┼─────────────────┘
-                            ▼
-                  ┌─────────────────────┐
-                  │ Validation & Safety │
-                  │      Layer          │
-                  └──────────┬──────────┘
+                         ┌─────────────────────┐
+                         │      CITIZEN        │
+                         │ Patient / Elderly   │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                     ┌──────────────────────────┐
+                     │     SWASTHYA AI          │
+                     │ Citizen Health Interface │
+                     └────────────┬─────────────┘
+                                  │
+              ┌───────────────────┼───────────────────┐
+              │                   │                   │
+              ▼                   ▼                   ▼
+       ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+       │ Medical      │    │ Medical      │    │ Digital      │
+       │ Reports      │    │ Imaging      │    │ Medical ID   │
+       └──────┬───────┘    └──────┬───────┘    └──────┬───────┘
+              │                   │                   │
+              ▼                   ▼                   ▼
+          OCR / NLP          AI Inference       Patient Profile
+              │                   │                   │
+              └──────────────┬────┴───────────────────┘
                              ▼
-                  ┌─────────────────────┐
-                  │ Explainable Output  │
-                  └──────────┬──────────┘
-                             ▼
-                ┌────────────────────────┐
-                │ Citizen / Doctor View  │
-                └────────────────────────┘
+                  ┌────────────────────────┐
+                  │ STRUCTURED HEALTH DATA │
+                  └────────────┬───────────┘
+                               ▼
+                  ┌────────────────────────┐
+                  │ VALIDATION & SAFETY    │
+                  │                        │
+                  │ • OCR Confidence       │
+                  │ • Image Quality         │
+                  │ • Plausibility         │
+                  │ • Safety Filtering      │
+                  │ • Provenance            │
+                  └────────────┬───────────┘
+                               ▼
+                  ┌────────────────────────┐
+                  │ EXPLAINABLE AI LAYER   │
+                  └────────────┬───────────┘
+                               ▼
+             ┌─────────────────┼─────────────────┐
+             │                 │                 │
+             ▼                 ▼                 ▼
+        Patient UI        Doctor Workflow    Emergency UI
+             │
+             ▼
+     Regional Language
+             │
+             ▼
+          Voice
 ```
 
 ---
 
-# 🧠 Major Features
+# 🧠 The Key Technical Idea
 
-## 1. 📄 Medical Report Understanding
+SwasthyaAI is not designed around the principle:
 
-SwasthyaAI can process medical reports and convert complex medical information into understandable citizen-facing explanations.
+> `AI → Answer`
 
-### Pipeline
+Instead, the architecture follows:
+
+> **AI → Structured Data → Validation → Safety → Explanation → Citizen**
+
+This distinction is important for healthcare applications.
+
+A model prediction should not automatically become a patient-facing statement.
+
+---
+
+# 🛡️ AI Safety Pipeline
+
+One of the core architectural principles of SwasthyaAI is the separation between **AI inference** and **citizen-facing explanation**.
+
+```text
+Input
+  ↓
+OCR / AI Model
+  ↓
+Structured Extraction
+  ↓
+OCR Confidence Check
+  ↓
+Image Quality Check
+  ↓
+Biological / Logical Plausibility
+  ↓
+Safety Validation
+  ↓
+Diagnostic Language Filtering
+  ↓
+Provenance Tracking
+  ↓
+Patient-Friendly Explanation
+  ↓
+Regional Language
+  ↓
+Voice Output
+```
+
+### Why this matters
+
+A healthcare AI system can fail because of:
+
+- Poor image quality
+- OCR errors
+- Incorrect value extraction
+- Model uncertainty
+- Ambiguous medical terminology
+- Unsupported diagnostic conclusions
+- Hallucinated explanations
+
+SwasthyaAI therefore treats **validation as a first-class architectural layer**.
+
+---
+
+# 🧾 1. Medical Report Understanding
+
+SwasthyaAI is designed to process medical reports containing:
+
+- Biomarker values
+- Reference ranges
+- Medical terminology
+- Diagnostic measurements
+- Structured and unstructured information
+
+### Processing pipeline
 
 ```text
 Medical Report
       ↓
-Image / Document Upload
+Image / Document Input
       ↓
 OCR
       ↓
-Structured Extraction
+Text Extraction
       ↓
-Biomarker Validation
+Structured Biomarker Extraction
       ↓
-Reference Range Analysis
+Validation
       ↓
-Safety Validation
+Safety Filter
       ↓
-Plain-Language Explanation
+Simple Explanation
       ↓
 Regional Language
       ↓
-Voice Assistance
+Voice
 ```
 
-### Key principles
+### Example
 
-- OCR confidence checking
-- Structured medical-value extraction
-- Reference-range awareness
-- Biological plausibility checks
-- Safety filtering
-- Provenance tracking
-- Citizen-friendly explanations
-- Regional-language support
-- Voice accessibility
+Instead of presenting:
+
+```text
+Hemoglobin: 10.2 g/dL
+Reference Range: 12–16 g/dL
+```
+
+the citizen-facing layer can explain the information in simpler language while preserving the original value and reference range.
+
+> **Important:** SwasthyaAI is designed to explain and assist, not replace a qualified medical professional.
 
 ---
 
-# 🩻 2. Chest X-Ray AI
+# 🩻 2. AI Medical Imaging
 
-SwasthyaAI integrates the **XRAY medical imaging module** as a dedicated radiology screening capability.
+SwasthyaAI includes a dedicated medical imaging layer built around **MONAI + PyTorch-based workflows**.
 
-The XRAY project provides a MONAI/PyTorch-based medical imaging laboratory with chest X-ray analysis and explainability.
+The imaging component supports modular medical AI workflows including:
 
-### Supported X-Ray Findings
+### Chest X-Ray
 
-The current XRAY implementation defines multi-label analysis for:
+Detection workflow includes findings such as:
 
-- Normal
 - Pneumonia
+- Cardiomegaly
 - Pleural Effusion
 - Atelectasis
-- Cardiomegaly
 - Infiltration
 - Consolidation
 - Nodule
+- Normal
 
-### Processing Pipeline
+### Explainability
+
+The imaging system includes **Grad-CAM-based visual explanation**, allowing model attention to be inspected rather than exposing only a final prediction.
 
 ```text
-X-Ray Upload
-     ↓
-Image Validation
-     ↓
-MONAI Preprocessing
-     ↓
-DenseNet121
-     ↓
-Multi-Label Prediction
-     ↓
-Confidence / Risk Information
-     ↓
+X-Ray
+  ↓
+Preprocessing
+  ↓
+AI Model
+  ↓
+Prediction
+  ↓
 Grad-CAM
-     ↓
-Explainability Overlay
-     ↓
-Citizen / Doctor View
+  ↓
+Visual Explanation
 ```
-
-The XRAY implementation also distinguishes between:
-
-```text
-REAL MODEL
-    ↓
-Verified model weights
-    ↓
-Actual inference
-
-DEMO MODE
-    ↓
-Clearly labelled simulation
-
-MODEL NOT CONFIGURED
-    ↓
-Prediction blocked
-    ↓
-Configuration instructions
-```
-
-This separation is important because a healthcare prototype should **never present a simulated output as a real medical prediction**.
 
 ---
 
-# 🧠 3. Brain MRI AI
+# 🧬 3. Ultrasound AI
 
-The **Brain AI** module adds neurological imaging analysis to SwasthyaAI.
+The imaging module also contains workflows for ultrasound analysis.
 
-The current implementation contains an MRI pipeline covering:
-
-- MRI image enhancement
-- Noise reduction
-- Contrast enhancement
-- Skull stripping
-- Tumor segmentation
-- Radiomic feature extraction
-- CNN classification
-- SVM classification
-
-### MRI Pipeline
+### Classification
 
 ```text
-Brain MRI
-    ↓
-Image Enhancement
-    ↓
-Noise Reduction
-    ↓
-CLAHE
-    ↓
-Gamma Correction
-    ↓
-Skull Stripping
-    ↓
-Tumor Segmentation
-    ↓
-Feature Extraction
-    ↓
-┌───────────────┬───────────────┐
-│               │               │
-▼               ▼               │
-CNN             SVM              │
-│               │               │
-└───────────────┴───────────────┘
-                ↓
-        AI-assisted Result
-                ↓
-        Visualization Layer
+Ultrasound
+     ↓
+AI Classification
+     ↓
+Normal / Benign / Malignant
 ```
 
-### MRI Enhancement
+### Segmentation
 
-The implementation contains:
+A MONAI-based segmentation workflow can identify relevant structures/regions using neural-network segmentation.
+
+```text
+Ultrasound
+     ↓
+Preprocessing
+     ↓
+Segmentation Model
+     ↓
+Segmentation Mask
+     ↓
+Visualization
+```
+
+---
+
+# 🧠 4. Brain MRI Analysis
+
+SwasthyaAI also incorporates a dedicated brain MRI research module.
+
+The research implementation explores a multi-stage pipeline:
+
+```text
+MRI Image
+   ↓
+Image Enhancement
+   ↓
+Noise Reduction
+   ↓
+Skull Stripping
+   ↓
+Tumor Segmentation
+   ↓
+Feature Extraction
+   ↓
+Classification
+```
+
+### Image enhancement
+
+The pipeline includes techniques such as:
 
 - Min-Max normalization
 - Gaussian filtering
@@ -251,922 +348,152 @@ The implementation contains:
 - CLAHE
 - Gamma correction
 
-### Tumor Segmentation
+### Skull stripping
 
-Multiple segmentation approaches are available in the project:
+The workflow explores:
+
+- Otsu thresholding
+- Morphological operations
+- Connected components
+- Convex-hull based processing
+
+### Tumor segmentation
+
+Research workflows include:
 
 - K-Means
 - Fuzzy C-Means
 - Watershed
-- Seeded Region Growing
+- Seeded region growing
 
-### Feature Extraction
+### Feature extraction
 
-The system extracts radiomic information including:
+Radiomic features include:
 
-#### Texture
+- GLCM texture features
+- First-order statistical features
+- Shape-related features
 
-- Contrast
-- Dissimilarity
-- Homogeneity
-- Energy
-- ASM
-- Correlation
-- Entropy
+### Classification
 
-#### Intensity
+The research implementation explores:
 
-- Mean
-- Variance
-- Standard deviation
-- Skewness
-- Kurtosis
-- Histogram entropy
-
-#### Shape
-
-- Area
-- Perimeter
-- Circularity
-- Solidity
-- Eccentricity
-- Aspect ratio
-
-These outputs can become inputs to SwasthyaAI's imaging-analysis layer.
+- CNN-based classification
+- RBF SVM classification
 
 ---
 
-# 🔬 4. MONAI Medical Imaging Engine
+# 🪪 5. Digital Medical Identity
 
-MONAI acts as the core medical-imaging AI framework within the architecture.
+Healthcare information becomes significantly more useful when it can be associated with a structured patient identity.
 
-MONAI is a PyTorch-based open-source framework specifically designed for deep learning in healthcare imaging. It provides domain-specific preprocessing, networks, losses, metrics and healthcare-imaging workflows.
+SwasthyaAI includes a Digital Medical Identity module.
 
-### SwasthyaAI Imaging Layer
+### Core workflow
 
 ```text
-                 MONAI Imaging Engine
-                         │
-       ┌─────────────────┼─────────────────┐
-       │                 │                 │
-       ▼                 ▼                 ▼
-     X-Ray             MRI            Ultrasound
-       │                 │                 │
-       ▼                 ▼                 ▼
- DenseNet121        MRI Models       DenseNet / UNet
-       │                 │                 │
-       └─────────────────┼─────────────────┘
-                         ▼
-                  Explainability
-                         │
-                         ▼
-                  Validation Layer
+Create Medical ID
+       ↓
+Patient Profile
+       ↓
+Health Information
+       ↓
+Consent-Based Sharing
+       ↓
+QR Access
+       ↓
+Doctor / Emergency Workflow
 ```
 
-### Current MONAI Capabilities
+### Key interface capabilities
 
-The integrated imaging architecture can support:
-
-- Medical image preprocessing
-- DenseNet-based classification
-- UNet-based segmentation
-- Grad-CAM explainability
-- Multi-dimensional medical imaging
-- Future CT workflows
-- Future MRI 3D workflows
-- GPU acceleration
-- Model registry architecture
-
-MONAI itself is designed to support healthcare-imaging workflows and can be installed through its Python package ecosystem.
-
----
-
-# 🪪 5. Digital Medical ID
-
-The **Medical ID module** provides the identity and record-access layer.
-
-The current implementation contains:
-
-- Digital Medical ID
 - Patient dashboard
-- Doctor dashboard
+- Medical ID creation
+- Medical directory
 - Patient profile
+- Doctor dashboard
 - Doctor-patient profile
 - Emergency profile
 - QR scanning
-- QR-based profile routing
-- Patient directory
-- Medical profile sharing
-- Medical record navigation
+- Profile sharing
 
-### Medical ID Architecture
-
-```text
-                 Digital Medical ID
-                         │
-          ┌──────────────┼──────────────┐
-          │              │              │
-          ▼              ▼              ▼
-       Patient          Doctor       Emergency
-       Portal           Portal         Access
-          │              │              │
-          └──────────────┼──────────────┘
-                         ▼
-                  Medical Records
-                         │
-                         ▼
-                  SwasthyaAI Engine
-```
-
-### QR-Based Access
-
-```text
-Medical ID
-    ↓
-QR Code
-    ↓
-Scan
-    ↓
-Identify Medical ID
-    ↓
-Authorization / Access Flow
-    ↓
-Patient / Doctor / Emergency View
-```
-
-The current React implementation includes routes for patient dashboards, doctor dashboards, doctor-patient views, emergency profiles and medical-ID profiles.
+The implementation is structured as a React/Vite application with dedicated patient, doctor and emergency workflows.
 
 ---
 
-# 🚑 6. Emergency Medical Access
+# 🚨 6. Emergency Medical Access
 
-Emergency situations require rapid access to critical information.
+During emergencies, patients may not be able to communicate their medical history.
 
-SwasthyaAI therefore includes a dedicated emergency profile flow.
+SwasthyaAI provides an emergency-oriented access workflow around the Digital Medical ID.
 
 ```text
-Emergency
-    ↓
-Scan Medical ID / QR
-    ↓
-Emergency Profile
-    ↓
-Critical Patient Information
-    ↓
-Authorized Medical Access
+Patient Medical ID
+       ↓
+QR / Medical ID
+       ↓
+Emergency Access
+       ↓
+Essential Patient Information
+       ↓
+Faster Context for Emergency Workflow
 ```
 
-The emergency interface is intentionally separated from the normal patient and doctor dashboards.
+The goal is to make critical information easier to access while maintaining appropriate access controls and consent principles.
 
 ---
 
-# 👨‍⚕️ 7. Doctor Dashboard
+# 👨‍⚕️ 7. Doctor Workflow
 
-The doctor-facing interface provides a separate workflow from the citizen-facing interface.
+SwasthyaAI is not designed only for patients.
+
+A dedicated doctor-side workflow can provide structured access to patient information.
 
 ```text
-Doctor Login
-     ↓
+Doctor
+  ↓
 Doctor Dashboard
-     ↓
+  ↓
 Patient Search
-     ↓
-Medical ID
-     ↓
+  ↓
 Patient Profile
-     ↓
-Medical Reports
-     ↓
-AI Imaging Results
-     ↓
-AI Explainability
-     ↓
-Clinical Review
-```
-
-AI output should remain **decision-support information**, not an autonomous diagnosis.
-
----
-
-# 🛡️ 8. AI Safety & Validation Layer
-
-This is the most important architectural layer.
-
-SwasthyaAI should not directly convert raw AI output into a medical recommendation.
-
-Instead:
-
-```text
-AI Output
-    ↓
-Structured Validation
-    ↓
-Image / Input Quality Check
-    ↓
-Model Status Verification
-    ↓
-Confidence Validation
-    ↓
-Biological / Clinical Plausibility
-    ↓
-Safety Rules
-    ↓
-Diagnostic Language Filtering
-    ↓
-Explainable Output
-```
-
-### Model States
-
-Every imaging model should expose one of three states:
-
-| State                  | Meaning                                                        |
-| ---------------------- | -------------------------------------------------------------- |
-| `REAL MODEL`           | Verified model weights are available and inference is executed |
-| `DEMO MODE`            | Output is simulated and explicitly labelled                    |
-| `MODEL NOT CONFIGURED` | Model cannot generate predictions                              |
-
-This prevents a major prototype failure: **showing fabricated AI predictions as if they came from an actual trained model.**
-
----
-
-# 🔍 9. Explainable AI
-
-SwasthyaAI should expose not only the prediction but also the evidence representation available from the model.
-
-### X-Ray
-
-```text
-X-Ray
   ↓
-Prediction
+Medical Information
   ↓
-Grad-CAM
-  ↓
-Heatmap
-  ↓
-Original + Heatmap Overlay
+AI-Assisted Information
 ```
 
-### MRI
+This creates a bridge between:
 
-```text
-MRI
- ↓
-Enhanced Image
- ↓
-Segmentation
- ↓
-Tumor Region
- ↓
-Feature Visualization
-```
-
-### Ultrasound
-
-```text
-Ultrasound
-    ↓
-Classification / Segmentation
-    ↓
-Prediction
-    ↓
-CAM / Boundary Overlay
-```
-
-The purpose is to make AI output more inspectable rather than presenting a black-box label.
+**Citizen → AI → Structured Information → Healthcare Professional**
 
 ---
 
-# 🏗️ 10. Unified SwasthyaAI Architecture
+# 🌐 8. Regional Language Accessibility
+
+A major usability challenge in healthcare is language.
+
+The platform is designed to support:
 
 ```text
-┌─────────────────────────────────────────────────────────┐
-│                    SWASTHYA AI                         │
-│        Citizen-Centric Healthcare Platform             │
-└─────────────────────────┬───────────────────────────────┘
-                          │
-        ┌─────────────────┼──────────────────┐
-        │                 │                  │
-        ▼                 ▼                  ▼
-┌───────────────┐ ┌───────────────┐ ┌────────────────┐
-│ Medical       │ │ Medical       │ │ Digital        │
-│ Reports       │ │ Imaging       │ │ Medical ID     │
-└───────┬───────┘ └───────┬───────┘ └───────┬────────┘
-        │                 │                  │
-        ▼                 ▼                  ▼
-      OCR/NLP        MONAI Imaging       QR / Records
-        │                 │                  │
-        │       ┌─────────┼──────────┐       │
-        │       │         │          │       │
-        │       ▼         ▼          ▼       │
-        │     X-Ray      MRI    Ultrasound    │
-        │       │         │          │       │
-        └───────┴─────────┼──────────┴───────┘
-                          ▼
-                ┌──────────────────┐
-                │ Validation Layer │
-                └────────┬─────────┘
-                         ▼
-                ┌──────────────────┐
-                │ Safety Layer     │
-                └────────┬─────────┘
-                         ▼
-                ┌──────────────────┐
-                │ Explainability   │
-                └────────┬─────────┘
-                         ▼
-              ┌───────────────────────┐
-              │ Citizen / Doctor UI   │
-              └───────────────────────┘
-```
-
----
-
-# 🧩 11. Module Mapping
-
-| Repository      | SwasthyaAI Module           | Primary Responsibility                         |
-| --------------- | --------------------------- | ---------------------------------------------- |
-| `XRAY`          | X-Ray Imaging Module        | Chest X-ray screening + Grad-CAM               |
-| `brain-ai-090`  | Brain MRI Module            | MRI enhancement, segmentation & classification |
-| `medical-id-`   | Digital Medical Identity    | Patient, doctor & emergency medical access     |
-| `monai`         | Medical Imaging Foundation  | Healthcare imaging AI infrastructure           |
-| SwasthyaAI Core | Intelligence & Safety Layer | Report understanding, validation & explanation |
-
----
-
-# 🔄 12. End-to-End User Journey
-
-## Citizen Journey
-
-```text
-Open SwasthyaAI
-       ↓
-Create / Access Medical ID
-       ↓
-Upload Medical Report
-       ↓
-Upload Medical Image
-       ↓
-AI Processing
-       ↓
-Validation
-       ↓
-Explainability
-       ↓
+Medical Information
+        ↓
 Simple Explanation
-       ↓
+        ↓
 Regional Language
-       ↓
-Voice Assistance
-```
-
----
-
-## Doctor Journey
-
-```text
-Doctor Dashboard
-       ↓
-Search Patient
-       ↓
-Open Medical ID
-       ↓
-Review Reports
-       ↓
-Review X-Ray / MRI
-       ↓
-Inspect AI Explanation
-       ↓
-Review Patient Context
-       ↓
-Clinical Decision
-```
-
----
-
-## Emergency Journey
-
-```text
-Emergency
-   ↓
-Scan Medical ID
-   ↓
-Emergency Profile
-   ↓
-Relevant Patient Information
-   ↓
-Authorized Access
-```
-
----
-
-# 💻 13. Technology Stack
-
-## Frontend
-
-- React
-- Vite
-- JavaScript
-- React DOM
-- Lucide React
-- QR Code generation
-- Responsive healthcare UI
-
-## AI / Machine Learning
-
-- Python
-- PyTorch
-- MONAI
-- TensorFlow
-- Keras
-- Scikit-learn
-- OpenCV
-- NumPy
-- SciPy
-- scikit-image
-
-## Medical Imaging
-
-- DenseNet121
-- UNet
-- Grad-CAM
-- CNN
-- SVM
-- K-Means
-- Fuzzy C-Means
-- Watershed
-- Radiomic feature extraction
-
-## Visualization
-
-- Matplotlib
-- Heatmaps
-- Segmentation overlays
-- Medical-image visualization
-- Clinical report generation
-
----
-
-# 📂 14. Proposed SwasthyaAI Project Structure
-
-```text
-swasthya-ai/
-│
-├── frontend/
-│   ├── patient/
-│   ├── doctor/
-│   ├── emergency/
-│   └── medical-id/
-│
-├── backend/
-│   ├── api/
-│   ├── authentication/
-│   ├── medical-records/
-│   └── consent/
-│
-├── ai/
-│   ├── report-understanding/
-│   │
-│   ├── imaging/
-│   │   ├── xray/
-│   │   ├── mri/
-│   │   ├── ultrasound/
-│   │   └── common/
-│   │
-│   ├── validation/
-│   ├── safety/
-│   └── explainability/
-│
-├── models/
-│   ├── xray/
-│   ├── brain-mri/
-│   └── ultrasound/
-│
-├── data/
-│   ├── uploads/
-│   ├── processed/
-│   └── outputs/
-│
-├── reports/
-│
-├── docs/
-│   ├── architecture/
-│   ├── clinical/
-│   └── api/
-│
-└── tests/
-```
-
----
-
-# 🔌 15. Integration Strategy
-
-The repositories should **not simply be copied into one folder**.
-
-Instead, each project should become an independent module behind a common SwasthyaAI interface.
-
-### Recommended architecture
-
-```text
-React Frontend
-      │
-      ▼
-SwasthyaAI API Gateway
-      │
-      ├──────────────► Medical Report Service
-      │
-      ├──────────────► X-Ray Service
-      │
-      ├──────────────► Brain MRI Service
-      │
-      ├──────────────► Ultrasound Service
-      │
-      ├──────────────► Medical ID Service
-      │
-      └──────────────► Validation & Safety Service
-```
-
-This avoids tightly coupling the React application to Python/TensorFlow/PyTorch inference code.
-
----
-
-# 🧠 16. Unified Imaging API
-
-A common interface should be created for every imaging model.
-
-Example:
-
-```json
-{
-  "request_id": "IMG-2026-00001",
-  "patient_id": "SWAS-2026-000001",
-  "modality": "xray",
-  "model": "chest-xray-v1",
-  "status": "REAL_MODEL",
-  "prediction": {
-    "findings": [],
-    "confidence": {}
-  },
-  "explainability": {
-    "type": "gradcam",
-    "available": true
-  },
-  "validation": {
-    "image_quality": "PASS",
-    "model_loaded": true
-  }
-}
-```
-
-For MRI:
-
-```json
-{
-  "request_id": "IMG-2026-00002",
-  "patient_id": "SWAS-2026-000001",
-  "modality": "brain_mri",
-  "model": "brain-mri-v1",
-  "status": "REAL_MODEL",
-  "preprocessing": {
-    "enhancement": true,
-    "skull_stripping": true
-  },
-  "segmentation": {
-    "available": true
-  },
-  "classification": {
-    "available": true
-  }
-}
-```
-
----
-
-# 🔐 17. Privacy & Security Principles
-
-SwasthyaAI should follow a privacy-first architecture.
-
-### Principles
-
-- Explicit patient consent
-- Least-privilege access
-- Role-based authorization
-- Secure medical-record storage
-- Audit logging
-- Emergency access controls
-- Medical-ID based routing
-- Secure file handling
-- Input validation
-- Model-status verification
-- No fabricated clinical output
-
----
-
-# 🧪 18. Testing Strategy
-
-Testing should cover four levels.
-
-### Unit Testing
-
-```text
-Input Validation
-     ↓
-Preprocessing
-     ↓
-Model Loading
-     ↓
-Inference
-     ↓
-Output Validation
-```
-
-### Integration Testing
-
-```text
-Frontend
-   ↓
-API
-   ↓
-AI Service
-   ↓
-Validation
-   ↓
-Response
-```
-
-### Safety Testing
-
-Test:
-
-- Missing model weights
-- Corrupted images
-- Blank images
-- Unsupported formats
-- Invalid patient IDs
-- Invalid medical values
-- Low-confidence outputs
-- Demo-mode outputs
-
-### UI Testing
-
-Test:
-
-- Patient dashboard
-- Doctor dashboard
-- Emergency view
-- Medical ID
-- QR scanner
-- X-ray analysis
-- MRI analysis
-- AI report view
-
----
-
-# 📸 19. Screenshots
-
-Add your prototype screenshots here.
-
-## Main Dashboard
-
-```text
-docs/screenshots/dashboard.png
-```
-
-
-
----
-
-## Medical ID
-
-```text
-docs/screenshots/medical-id.png
-```
-
-
-
----
-
-## X-Ray Analysis
-
-```text
-docs/screenshots/xray-analysis.png
-```
-
-
-
----
-
-## Brain MRI Analysis
-
-```text
-docs/screenshots/brain-mri.png
-```
-
-
-
----
-
-## AI Explainability
-
-```text
-docs/screenshots/explainability.png
-```
-
-
-
----
-
-## Doctor Dashboard
-
-```text
-docs/screenshots/doctor-dashboard.png
-```
-
-
-
----
-
-## Emergency Medical Profile
-
-```text
-docs/screenshots/emergency-profile.png
-```
-
-
-
----
-
-# 📊 20. Prototype Demonstration Flow
-
-For a hackathon demonstration, the recommended flow is:
-
-```text
-1. Open SwasthyaAI
         ↓
-2. Show Digital Medical ID
-        ↓
-3. Open Patient Dashboard
-        ↓
-4. Upload Medical Report
-        ↓
-5. Show structured extraction
-        ↓
-6. Open X-Ray Analysis
-        ↓
-7. Show AI finding
-        ↓
-8. Show Grad-CAM explanation
-        ↓
-9. Open Brain MRI
-        ↓
-10. Show enhancement + segmentation
-        ↓
-11. Return to patient profile
-        ↓
-12. Open Doctor Dashboard
-        ↓
-13. Show combined patient information
-        ↓
-14. Demonstrate Emergency QR flow
+Voice Output
 ```
 
-This makes the prototype look like **one healthcare platform**, rather than four disconnected GitHub projects.
+This is particularly important for:
+
+- Elderly citizens
+- Low-literacy users
+- Non-English speakers
+- Users unfamiliar with medical terminology
+
+The planned accessibility layer can integrate services such as regional-language AI and speech systems.
 
 ---
 
-# ⚠️ 21. Medical Safety Disclaimer
-
-SwasthyaAI is a research and prototype platform.
-
-AI-generated results are intended to demonstrate healthcare decision-support workflows and medical-image analysis capabilities.
-
-They are **not a substitute for diagnosis, treatment, or professional medical judgment**.
-
-Real clinical deployment requires:
-
-- Clinical validation
-- Appropriate datasets
-- Independent performance evaluation
-- Regulatory review
-- Security assessment
-- Clinical workflow validation
-- Qualified healthcare-professional oversight
-
----
-
-# 🧪 22. Current Prototype Status
-
-| Component                    | Status                    |
-| ---------------------------- | ------------------------- |
-| Digital Medical ID           | Prototype                 |
-| Patient Portal               | Prototype                 |
-| Doctor Portal                | Prototype                 |
-| Emergency Profile            | Prototype                 |
-| QR Medical ID                | Prototype                 |
-| X-Ray AI                     | Prototype                 |
-| Brain MRI AI                 | Research Prototype        |
-| MONAI Imaging Layer          | Integrated Research Layer |
-| Medical Report Understanding | Prototype                 |
-| AI Explainability            | Prototype                 |
-| Clinical Deployment          | Not intended              |
-| Regulatory Approval          | Not claimed               |
-
----
-
-# 🗺️ 23. Future Roadmap
-
-### Phase 1 — Prototype
-
-- X-Ray
-- MRI
-- Medical ID
-- Patient portal
-- Doctor portal
-- Emergency access
-- Report understanding
-
-### Phase 2 — AI Integration
-
-- Unified inference API
-- Model registry
-- Better explainability
-- Model versioning
-- Confidence calibration
-- Central validation service
-
-### Phase 3 — Multimodal Healthcare
-
-- CT
-- MRI 3D
-- Ultrasound
-- Pathology imaging
-- Additional laboratory-report analysis
-
-### Phase 4 — Healthcare Interoperability
-
-- FHIR
-- HL7
-- ABDM-compatible workflows
-- Consent management
-- Hospital integrations
-
-### Phase 5 — Clinical Validation
-
-- Prospective evaluation
-- Multi-center validation
-- Bias evaluation
-- Safety evaluation
-- Clinical usability testing
-
----
-
-# 📚 24. Research & Open-Source Components
-
-SwasthyaAI builds upon multiple research and open-source components.
-
-### Project Repositories
-
-- `XRAY` — Swasthya MONAI Medical Imaging Lab
-- `brain-ai-090` — Brain MRI analysis pipeline
-- `medical-id-` — Digital Medical Identity frontend
-- `monai` — Medical imaging AI framework
-
-The MONAI ecosystem provides healthcare-specific deep-learning infrastructure for medical imaging, including preprocessing and model-development capabilities.
-
----
-
-# 👨‍💻 25. Developer
-
-**Vishwas Upadhyay**
-
-AI / ML • Healthcare AI • Medical Imaging • Full-Stack Development\
-
-
----
-
-# ⚖️ 26. Final Architecture Principle
-
-> **SwasthyaAI does not treat AI prediction as the final answer.**
-
-The platform follows:
-
-```text
-INPUT
-  ↓
-AI PROCESSING
-  ↓
-STRUCTURED OUTPUT
-  ↓
-VALIDATION
-  ↓
-SAFETY CHECK
-  ↓
-EXPLAINABILITY
-  ↓
-HUMAN REVIEW
-  ↓
-CITIZEN / DOCTOR ASSISTANCE
-```
-
-This architecture allows SwasthyaAI to combine **medical report intelligence, medical imaging, digital medical identity and emergency healthcare access** into one modular platform while keeping AI output separated from final clinical decision-making.
+# 🔊 9. Voice
