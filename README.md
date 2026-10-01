@@ -1083,6 +1083,8 @@ B.Tech CSE Student • AI/ML • Medical AI • Blockchain • Full-Stack Develo
 - Computer Vision
 - Blockchain
 - Full-Stack Development
+
+
   **Palak Sahu**
 ### Focus Areas
 
@@ -1093,6 +1095,8 @@ B.Tech CSE Student • AI/ML • Medical AI • Blockchain • Full-Stack Develo
 - Explainable AI
 - Computer Vision
 - Full-Stack Development
+
+
  **Sejal Verma**
 ### Focus Areas
 
@@ -1103,6 +1107,8 @@ B.Tech CSE Student • AI/ML • Medical AI • Blockchain • Full-Stack Develo
 - Explainable AI
 - Computer Vision
 - Full-Stack Development
+
+
    **Priyanshu patel**
 ### Focus Areas
 
