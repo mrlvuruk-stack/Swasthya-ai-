@@ -2,7 +2,7 @@
 
 ### AI-Powered Citizen-Centric Healthcare Intelligence & Assistance Platform
 
-> **Understand your health. Verify the information. Access the right assistance.**
+> **Understand your health. Verify the information. Access the right assistance..**
 
 SwasthyaAI is a modular healthcare AI platform designed to make medical information more **understandable, accessible, explainable, and safety-aware** for citizens.
 
