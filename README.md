@@ -1069,7 +1069,7 @@ The goal is simple:
 
 # 👨‍💻 Developer
 
-**Vishwas Upadhyay**
+**Vishwas Upadhyay (mrl.v)**
 
 B.Tech CSE Student • AI/ML • Medical AI • Blockchain • Full-Stack Development
 
@@ -1083,7 +1083,36 @@ B.Tech CSE Student • AI/ML • Medical AI • Blockchain • Full-Stack Develo
 - Computer Vision
 - Blockchain
 - Full-Stack Development
+  **Palak Sahu**
+### Focus Areas
 
+- Artificial Intelligence
+- Machine Learning
+- Medical Imaging
+- Healthcare AI
+- Explainable AI
+- Computer Vision
+- Full-Stack Development
+ **Sejal Verma**
+### Focus Areas
+
+- Artificial Intelligence
+- Machine Learning
+- Medical Imaging
+- Healthcare AI
+- Explainable AI
+- Computer Vision
+- Full-Stack Development
+   **Priyanshu patel**
+### Focus Areas
+
+- Artificial Intelligence
+- Machine Learning
+- Medical Imaging
+- Healthcare AI
+- Explainable AI
+- Computer Vision
+- Full-Stack Development
 ---
 
 # ⭐ Final Architecture Principle
