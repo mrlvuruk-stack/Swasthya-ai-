@@ -1,4 +1,4 @@
-# 🩺 SwasthyaAI
+ # 🩺 SwasthyaAI
 
 ### AI-Powered Citizen-Centric Healthcare Intelligence & Assistance Platform
 
